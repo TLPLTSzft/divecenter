@@ -19,7 +19,7 @@ class EquipmentFactory extends Factory
     {
         return [
             "type_id" => fake()->numberBetween(1, 20),
-            "name" => fake()->randomElement(['Mask', 'Snorkel', 'Buoyancy Compensator', 'Dive Suit', 'Fins', 'Dive Booties', 'Weight Belt', 'Dive Computer', 'Pressure Gauge', 'Alternate Air Source', 'Regulator']),
+            "name" => fake()->randomElement(['Mask', 'Snorkel', 'BuoyancyCompensator', 'DiveSuit', 'AirTank', 'Fins', 'DiveBooties', 'WeightBelt', 'DiveComputer', 'PressureGauge', 'AlternateAirSource', 'Regulator']),
             "manufacturer_id" => fake()->numberBetween(1, 30),
             "size_id" => fake()->numberBetween(1, 30),
             "color_id" => fake()->numberBetween(1, 30),

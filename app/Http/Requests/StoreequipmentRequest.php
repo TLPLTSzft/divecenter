@@ -13,7 +13,7 @@ class StoreequipmentRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,12 @@ class StoreequipmentRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            "type_id" => "required|integer|min:1|max:20",
+            "name" => "required|string|max:50",
+            "manufacturer_id" => "required|integer|min:1|max:30",
+            "size_id" => "required|integer|min:1|max:30",
+            "color_id" => "required|integer|min:1|max:30",
+            "description" => "string|max:100",
         ];
     }
 }

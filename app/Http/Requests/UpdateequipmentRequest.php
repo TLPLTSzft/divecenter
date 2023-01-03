@@ -13,7 +13,7 @@ class UpdateequipmentRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,12 @@ class UpdateequipmentRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            "type_id" => "integer|min:1|max:20",
+            "name" => "string|max:50",
+            "manufacturer_id" => "integer|min:1|max:30",
+            "size_id" => "integer|min:1|max:30",
+            "color_id" => "integer|min:1|max:30",
+            "description" => "string|max:100",
         ];
     }
 }
